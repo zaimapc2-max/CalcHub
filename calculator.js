@@ -7,9 +7,9 @@ const result = document.getElementById("result");
 
 result.innerText = "0";
 
-const buttons = document.querySelectorAll(".btn-grid .btn");
+const calcButtons = document.querySelectorAll(".btn-grid .btn");
 
-buttons.forEach(button => {
+calcButtons.forEach(button => {
     button.addEventListener("click", () => {
 
         let value = button.innerText;

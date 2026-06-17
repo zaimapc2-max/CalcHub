@@ -4,23 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CalcBuddy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>CalcBuddy</header>
 <nav>
-    <button data-target="norm">Calculator</button>
-    <button data-target="img">Imaginary Calulator</button>
-    <button data-target="gpa">GPA Calculator</button>
-    <button data-target="abs">Absolute Course Calculator</button>
-    <button data-target="rel">Relative Course Calculator</button>
+  <button data-target="norm"><img src="images/cal.png" alt="Calculator"></button>
+    <button data-target="img"><img src="images/imagi.png" alt="Calculator"></button>
+    <button data-target="gpa"><img src="images/gp.png" alt="Calculator"></button>
+    <button data-target="abs"><img src="images/ag.png" alt="Calculator"></button>
+    <button data-target="rel"><img src="images/rg.png" alt="Calculator"></button>
 </nav>
 <main>
     <section id="norm">
-        <h2>Calculator</h2>
+    <div class="calc-wrapper">
+        <h2 style="display:none">Calculator</h2>
         <div id="display">
             <p id="expression"></p>
             <p id="result"></p>
+            <img id="error-cat" src="images/cat.png" alt="error">
         </div>
         <div class="btn-grid">
             <button class="btn btn-special">C</button>
@@ -42,9 +45,9 @@
             <button class="btn btn-zero">0</button>
             <button class="btn">.</button>
             <button class="btn btn-operator">=</button>
-        
         </div>
-    </section>
+    </div>
+</section>
     <section id="img">
 
     </section>

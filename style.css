@@ -1,0 +1,135 @@
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: rgb(255, 230, 241);
+    min-height: 100vh;
+}
+
+header {
+    background-color: #b65176;
+    color: white;
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    border-bottom: 3px solid #893351;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+gap: 5px;
+padding: 8px;
+
+  
+}
+
+/* Navigation buttons */
+nav button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+nav img{
+   width: 180px;
+    height: auto;
+}
+
+
+/* Hover effect */
+nav button:hover img {
+opacity: 0.8;
+}
+
+#norm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 20px;
+    width: 320px;
+ }
+
+ main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+.calc-wrapper {
+    position: relative;
+    width: 380px;
+    height: 480px;
+    background-image: url('images/base_transparent.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#display {
+    position: absolute;
+    top: 18%;
+    left: 10%;
+    width: 55%;
+    height: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 10px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    color: #893351;
+}
+
+.btn-grid {
+    position: absolute;
+    top: 33%;
+    left: 10%;
+    width: 80%;
+    height: 62%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 6px;
+}
+
+.btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    color: transparent;
+    font-size: 0;
+}
+
+.btn-zero {
+    grid-column: span 1;
+}
+
+.btn:hover {
+    opacity: 0.6;
+}
+
+#error-cat {
+    display: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    animation: walkCat 2s linear infinite;
+}
+
+@keyframes walkCat {
+    from { left: 0%; }
+    to { left: 85%; }
+}

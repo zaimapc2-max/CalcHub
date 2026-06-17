@@ -22,6 +22,7 @@ calcButtons.forEach(button => {
 
             result.innerText = "0";
             expression.innerText = "";
+            document.getElementById("error-cat").style.display = "none";
 
         }
 
@@ -46,9 +47,11 @@ calcButtons.forEach(button => {
             else if (operator === "÷") {
 
                 if (c === 0) {
-                    result.innerText = "Error!!";
+                    result.innerText = "ERROR >-<";
+                     expression.innerText = "";
+                    document.getElementById("error-cat").style.display = "block";
                     return;
-                }
+            }
 
                 answer = p / c;
             }

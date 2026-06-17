@@ -48,7 +48,7 @@ calcButtons.forEach(button => {
 
                 if (c === 0) {
                     result.innerText = "ERROR >-<";
-                     expression.innerText = "";
+                    expression.innerText = "";
                     document.getElementById("error-cat").style.display = "block";
                     return;
             }

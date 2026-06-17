@@ -1,10 +1,8 @@
-/* Reset default browser spacing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 body {
     background-color: rgb(255, 230, 241);
@@ -16,7 +14,7 @@ header {
     color: white;
     padding: 10px 20px;
     font-family: 'Press Start 2P', cursive;
-    font-size: 14px;
+    font-size: 25px;
     border-bottom: 3px solid #893351;
 }
 
@@ -25,13 +23,10 @@ nav {
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-gap: 5px;
-padding: 8px;
-
-  
+    gap: 5px;
+    padding: 8px;
 }
 
-/* Navigation buttons */
 nav button {
     background: none;
     border: none;
@@ -39,38 +34,42 @@ nav button {
     cursor: pointer;
 }
 
-nav img{
-   width: 180px;
+nav img {
+    width: 300px;
     height: auto;
 }
 
-
-/* Hover effect */
 nav button:hover img {
-opacity: 0.8;
+    opacity: 0.8;
 }
 
-#norm{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-    justify-content: center;
-    min-height: 80vh;
-    padding: 20px;
-    width: 320px;
- }
-
- main {
+main {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
 }
+
+#norm {
+    background-image: url('images/pinkback.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.calc-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
 .calc-wrapper {
     position: relative;
-    width: 380px;
-    height: 480px;
+     width: 500px;
+    height: 630px;
     background-image: url('images/base_transparent.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -88,8 +87,9 @@ opacity: 0.8;
     justify-content: center;
     padding-right: 10px;
     font-family: 'Press Start 2P', cursive;
-    font-size: 15px;
+    font-size: 20px;
     color: #893351;
+    overflow: hidden;
 }
 
 .btn-grid {
@@ -108,28 +108,36 @@ opacity: 0.8;
     background: transparent;
     border: none;
     cursor: pointer;
-    font-family: 'Press Start 2P', cursive;
     color: transparent;
     font-size: 0;
-}
-
-.btn-zero {
-    grid-column: span 1;
 }
 
 .btn:hover {
     opacity: 0.6;
 }
 
+.btn-zero {
+    grid-column: span 1;
+}
+
 #error-cat {
     display: none;
-    width: 40px;
-    height: 40px;
+    width: 60x;
+    height: 60px;
     position: absolute;
+    top: 0;
     animation: walkCat 2s linear infinite;
 }
 
 @keyframes walkCat {
     from { left: 0%; }
     to { left: 85%; }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
+    color: #893351;
 }

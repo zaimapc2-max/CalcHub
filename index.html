@@ -5,70 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CalcBuddy</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>CalcBuddy</header>
-<nav>
-  <button data-target="norm"><img src="images/cal.png" alt="Calculator"></button>
-    <button data-target="img"><img src="images/imagi.png" alt="Calculator"></button>
-    <button data-target="gpa"><img src="images/gp.png" alt="Calculator"></button>
-    <button data-target="abs"><img src="images/ag.png" alt="Calculator"></button>
-    <button data-target="rel"><img src="images/rg.png" alt="Calculator"></button>
-</nav>
-<main>
-   <section id="norm">
-    <div class="calc-center">
-        <div class="calc-wrapper">
-            <h2 style="display:none">Calculator</h2>
-            <div id="display">
-                <p id="expression"></p>
-                <p id="result"></p>
-                <img id="error-cat" src="images/cat.png" alt="error">
+    <nav>
+        <button data-target="norm"><img src="images/cal.png" alt="Calculator"></button>
+        <button data-target="img"><img src="images/imagi.png" alt="Imaginary Calculator"></button>
+        <button data-target="gpa"><img src="images/gp.png" alt="GPA Calculator"></button>
+        <button data-target="abs"><img src="images/ag.png" alt="Absolute Grade Calculator"></button>
+        <button data-target="rel"><img src="images/rg.png" alt="Relative Grade Calculator"></button>
+    </nav>
+    <main>
+        <section id="norm">
+            <div class="calc-center">
+                <div class="calc-wrapper">
+                    <h2 style="display:none">Calculator</h2>
+                    <div id="display">
+                        <p id="expression"></p>
+                        <p id="result"></p>
+                        <img id="error-cat" src="images/cat.png" alt="error">
+                    </div>
+                    <div class="btn-grid">
+                        <button class="btn btn-special">C</button>
+                        <button class="btn btn-special">±</button>
+                        <button class="btn btn-special">%</button>
+                        <button class="btn btn-operator">÷</button>
+                        <button class="btn btn-number">7</button>
+                        <button class="btn btn-number">8</button>
+                        <button class="btn btn-number">9</button>
+                        <button class="btn btn-operator">×</button>
+                        <button class="btn btn-number">4</button>
+                        <button class="btn btn-number">5</button>
+                        <button class="btn btn-number">6</button>
+                        <button class="btn btn-operator">-</button>
+                        <button class="btn btn-number">1</button>
+                        <button class="btn btn-number">2</button>
+                        <button class="btn btn-number">3</button>
+                        <button class="btn btn-operator">+</button>
+                        <button class="btn btn-zero">0</button>
+                        <button class="btn">.</button>
+                        <button class="btn btn-operator">=</button>
+                    </div>
+                </div>
             </div>
-            <div class="btn-grid">
-                <button class="btn btn-special">C</button>
-                <button class="btn btn-special">±</button>
-                <button class="btn btn-special">%</button>
-                <button class="btn btn-operator">÷</button>
-                <button class="btn btn-number">7</button>
-                <button class="btn btn-number">8</button>
-                <button class="btn btn-number">9</button>
-                <button class="btn btn-operator">×</button>
-                <button class="btn btn-number">4</button>
-                <button class="btn btn-number">5</button>
-                <button class="btn btn-number">6</button>
-                <button class="btn btn-operator">-</button>
-                <button class="btn btn-number">1</button>
-                <button class="btn btn-number">2</button>
-                <button class="btn btn-number">3</button>
-                <button class="btn btn-operator">+</button>
-                <button class="btn btn-zero">0</button>
-                <button class="btn">.</button>
-                <button class="btn btn-operator">=</button>
-            </div>
-        </div>
-    </div>
-</section>
-    <section id="img">
-
-    </section>
-    <section id="gpa">
-
-    </section>
-    <section id="abs">
-        
-    </section>
-    <section id="rel">
-        
-    </section>
-</main>
-
-
-
-
-
-
+        </section>
+        <section id="img"></section>
+        <section id="gpa"></section>
+        <section id="abs"></section>
+        <section id="rel"></section>
+    </main>
     <footer>Zaima Amjad</footer>
     <script src="main.js"></script>
     <script src="calculator.js"></script>
@@ -76,8 +62,5 @@
     <script src="gpa.js"></script>
     <script src="absgpa.js"></script>
     <script src="relgpa.js"></script>
-    
-
-   
 </body>
 </html>

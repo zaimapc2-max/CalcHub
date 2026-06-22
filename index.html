@@ -51,7 +51,40 @@
             </div>
         </section>
         <section id="img"></section>
-        <section id="gpa"></section>
+       <section id="gpa">
+    <h2 >SGPA Calculator</h2>
+    <div id="subjects-container">
+
+        <div id="subjects-list"> </div>  
+         <div style="display:none" class="subject_row">
+            <input type="text" class="nameInput" placeholder="Enter Course Name">
+            <input type="text" class="credithoursInput" placeholder="Enter Credit Hours">
+            <label>Choose Grade:</label>
+
+            <select class="grade_selection">
+                <option>A+</option>
+                <option>A</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B</option>
+                <option>B-</option>
+                <option>C+</option>
+                <option>C</option>
+                <option>C-</option>
+                <option>D+</option>
+                <option>D</option>
+                <option>D-</option>
+                <option>F</option>
+            </select>
+            <button class="removeSubject">Remove</button>
+            </div> 
+
+        <button id="add-subject">Add Subject</button>
+        <button id="calc-gpa">Calculate SGPA</button>
+        <p id="gpa-result"></p>
+
+    </div>
+    </section>
         <section id="abs"></section>
         <section id="rel"></section>
     </main>

@@ -11,7 +11,6 @@
     <header>CalcBuddy</header>
     <nav>
         <button data-target="norm"><img src="images/cal.png" alt="Calculator"></button>
-        <button data-target="img"><img src="images/imagi.png" alt="Imaginary Calculator"></button>
         <button data-target="gpa"><img src="images/gp.png" alt="GPA Calculator"></button>
         <button data-target="abs"><img src="images/ag.png" alt="Absolute Grade Calculator"></button>
         <button data-target="rel"><img src="images/rg.png" alt="Relative Grade Calculator"></button>
@@ -50,7 +49,7 @@
                 </div>
             </div>
         </section>
-        <section id="img"></section>
+
        <section id="gpa">
     <h2 >SGPA Calculator</h2>
     <div id="subjects-container">
@@ -85,13 +84,28 @@
 
     </div>
     </section>
-        <section id="abs"></section>
+        <section id="abs">
+        <h2>Absolute Grade Calculator</h2>
+            <div id="abs-container">
+
+                <label for="abs-marks">Total Marks (out of 100):</label>
+                <input type="number" id="abs-marks" placeholder="Enter your total absolutes">
+
+                <label for="abs-scaling">Scaling (optional):</label>
+                <input type="number" id="abs-scaling" placeholder="0" min="0" step="1">
+
+                <button id="calc-abs">Calculate Grade</button>
+
+                <p id="abs-error"></p>
+                <p id="abs-result"></p>
+
+            </div>
+</section>
         <section id="rel"></section>
     </main>
     <footer>Zaima Amjad</footer>
     <script src="main.js"></script>
     <script src="calculator.js"></script>
-    <script src="imaginary.js"></script>
     <script src="gpa.js"></script>
     <script src="absgpa.js"></script>
     <script src="relgpa.js"></script>

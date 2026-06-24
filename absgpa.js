@@ -8,24 +8,24 @@ calcBtn.addEventListener("click", function () {
     const error = document.getElementById("abs-error");
     const result = document.getElementById("abs-result");
 
-    error.textContent = "";
-    result.textContent = "";
+    error.innerHTML = "";
+    result.innerHTML = "";
 
     const marks = Number(marksInput.value);
     const scaling = scalingInput.value === "" ? 0 : Number(scalingInput.value);
 
     if (marksInput.value === "") {
-        error.textContent = "Please enter your marks.";
+        error.innerHTML = "Please enter your marks.";
         return;
     }
 
     if (marks < 0 || marks > 100) {
-        error.textContent = "Marks must be between 0 and 100.";
+        error.innerHTML = "Marks must be between 0 and 100.";
         return;
     }
 
     if (scaling < 0) {
-        error.textContent = "Scaling cannot be negative.";
+        error.innerHTML = "Scaling cannot be negative.";
         return;
     }
 
@@ -55,6 +55,6 @@ calcBtn.addEventListener("click", function () {
     else if (marks >= DPlus) {grade = "D+";}
     else if (marks >= D) { grade = "D";}
     else {grade = "F";}
- result.textContent =
-        `Marks: ${marks} | Scaling: ${scaling} | Grade: ${grade}`;
+ result.innerHTML =
+       "Marks: " + marks + " | Scaling: " + scaling + " | Grade: " + grade;
 });

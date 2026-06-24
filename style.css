@@ -11,10 +11,15 @@ body {
 
 header {
     background-color: #b65176;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
     color: white;
-    padding: 10px 20px;
+    padding: 20px 40px;
+    text-align: center;
     font-family: 'Press Start 2P', cursive;
-    font-size: 25px;
+    font-size: 20px;
+    letter-spacing: 3px;
     border-bottom: 3px solid #893351;
 }
 
@@ -68,7 +73,7 @@ main {
 
 .calc-wrapper {
     position: relative;
-     width: 500px;
+    width: 500px;
     height: 630px;
     background-image: url('images/base_transparent.png');
     background-size: contain;
@@ -135,9 +140,215 @@ main {
 }
 
 footer {
+    border-top: 3px solid #893351;
+    background-color: #b65176;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     font-family: 'Press Start 2P', cursive;
     font-size: 8px;
     color: #893351;
+}
+
+
+body.theme-gpa header {
+    background-color: rgb(20, 121, 180);
+    border-bottom: 3px solid #062b50;
+}
+body.theme-gpa footer {
+    background-color: rgb(20, 121, 180);
+    border-top: 3px solid #062b50;
+}
+
+body.theme-gpa {
+    background-color: rgb(166, 228, 245);
+}
+
+#gpa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 40px 0;
+}
+
+#gpa h2 {
+    display: none;
+}
+#subjects-container {
+    position: relative;
+    width: 500px;
+    height: 630px;
+    background-image: url('images/cal_beach_back_transparent.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 195px 65px 45px;
+}
+
+#subjects-list {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-right: 4px;
+}
+
+
+#subjects-list::-webkit-scrollbar {
+    width: 6px;
+}
+#subjects-list::-webkit-scrollbar-thumb {
+    background: #1479b4;
+}
+#subjects-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.subject_row {
+    display: flex !important;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.subject_row .nameInput {
+    flex: 1.4;
+    min-width: 0;
+    font-size: 9px;
+    padding: 4px 5px;
+    border: 1px solid #1479b4;
+    background-color: rgba(255,255,255,0.85);
+}
+
+.subject_row .credithoursInput {
+    flex: 0.6;
+    min-width: 0;
+    font-size: 9px;
+    padding: 4px 5px;
+    border: 1px solid #1479b4;
+    background-color: rgba(255,255,255,0.85);
+}
+
+.subject_row label {
+    font-size: 8px;
+    color: #062b50;
+    white-space: nowrap;
+}
+
+.subject_row select {
+    font-size: 9px;
+    padding: 3px;
+    border: 1px solid #1479b4;
+    background-color: rgba(255,255,255,0.85);
+    flex-shrink: 0;
+}
+
+.subject_row .removeSubject {
+    font-size: 8px;
+    padding: 4px 6px;
+    background-color: #ff8aa8;
+    border: 1px solid #893351;
+    color: #893351;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.subject_row .removeSubject:hover{
+     background-color: #d45272;
+     color:#ec9bb8;
+     transform: translateY(-2px);
+
+}
+
+#add-subject,
+#calc-gpa {
+    flex-shrink: 0;
+    margin-top: 6px;
+    font-size: 7px;
+    padding: 7px 10px;
+    border: 1px solid #062b50;
+    cursor: pointer;
+
+    width: 100px;      /* adjust as needed */
+    height: 30px;
+    margin: 10px auto;
+    display: block;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+
+
+#add-subject {
+    background-color: #4fc3e0;
+    color: white;
+    margin-bottom: 8px;
+     font-family: 'Press Start 2P', cursive;
+      cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#add-subject:hover{
+     background-color: #378ea4;
+    transform: translateY(-2px);
+
+}
+
+#calc-gpa {
+    background-color: #1479b4;
+    color: white;
+    margin-top: 1px;
+     font-family: 'Press Start 2P', cursive;
+     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#calc-gpa:hover{
+    background-color: #1f8ccb;
+    transform: translateY(-2px);
+
+}
+#gpa-result {
+    flex-shrink: 0;
+    margin-top: 6px;
+    font-size: 11px;
+    color: #062b50;
+    text-align: center;
+     font-family: 'Press Start 2P', cursive;
+}
+
+body.theme-abs header {
+    background-color: #3a7d44;
+    border-bottom: 3px solid #2d5f35;
+}
+
+body.theme-abs footer {
+    background-color: #3a7d44;
+    border-top: 3px solid #2d5f35;
+}
+
+body.theme-abs {
+    background-color: #c8e6c0;
+}
+
+
+body.theme-rel header {
+    background-color: #1a1a3e;
+    border-bottom: 3px solid #0d0d2b;
+}
+body.theme-rel footer {
+    background-color: #1a1a3e;
+    border-top: 3px solid #0d0d2b;
+}
+body.theme-rel {
+    background-color: #2d2d5e;
 }
